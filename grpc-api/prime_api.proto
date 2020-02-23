@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message Request {
+    int32 n = 1;
+}
+
+message Response {
+	repeated int32 primes = 1;
+}
+
+service PrimeService {
+	rpc get_primes(Request) returns (Response) {}
+}
+
